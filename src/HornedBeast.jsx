@@ -13,8 +13,8 @@ class HornedBeast extends React.Component {
 
     addFave = () => {
         this.setState((prevState) => ({ 
-            favoriteCnt: this.prevState.isFavorite ? prevState.favoriteCnt : prevState.favoriteCnt + 1,
-            isFavorite: !this.state.isFavorite
+            favoriteCnt: prevState.isFavorite ? prevState.favoriteCnt : prevState.favoriteCnt + 1,
+            isFavorite: !prevState.isFavorite
          }))
     }
 
