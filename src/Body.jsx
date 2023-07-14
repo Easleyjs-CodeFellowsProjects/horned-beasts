@@ -8,22 +8,18 @@ class Body extends React.Component {
     render() {
                     return (
                         <Container>
-
                             <Row>
                                 {this.props.animals.map(animal => {
-                                            return (
-                                                <Col>
-                                                    <HornedBeast title={animal.title}
-                                                                 imgUrl={animal.image_url}
-                                                                 description={animal.description}
-                                                                 altText={animal.title}
-                                                                 key={animal._id}
-                                                    />
-                                                </Col>
-                                            )
+                                    return (
+                                            <HornedBeast title={animal.title}
+                                                            imgUrl={animal.image_url}
+                                                            description={animal.description}
+                                                            altText={animal.title}
+                                                            key={animal._id}
+                                            />
+                                    )
                                 })}
                             </Row>
-
                         </Container>
                     )
     }

@@ -28,9 +28,11 @@ class HornedBeast extends React.Component {
 
     render() {
 
-        return (<>
+        return (
+            <div style={{ display: 'block',
+            width: 300, padding: 30 }}>
             <Card style={{ width: '18rem' }}>
-                <Card.Img onClick={ this.addFave } variant="top" src={ this.props.imgUrl } />
+                <Card.Img onClick={ this.addFave } variant="top" src={ this.props.imgUrl } height={200} width={300} />
                 <Card.Body>
                     <Card.Title>{ this.props.title }</Card.Title>
                     <Card.Text>
@@ -40,7 +42,8 @@ class HornedBeast extends React.Component {
                  { this.faveIcon() }
                  <span className="favCount">{ this.state.favoriteCnt }</span>
             </Card>
-        </>)
+            </div>
+        )
     }
 }
 
