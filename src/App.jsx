@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import Header from './Header'
-import Main from './Main'
+import Body from './Body'
 import Footer from './Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/app.css'
 
 function App() {
   const animals = [{
@@ -31,12 +33,10 @@ function App() {
           "horns": 1
       }]
 
-
-    const someVar = 'testing.'
   return (
     <>
       <Header />
-      <Main animals={animals} />
+      <Body animals={animals} />
     </>
   )
 }
