@@ -2,7 +2,7 @@ import React from "react";
 import HornedBeast from "./HornedBeast";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+
 
 class Body extends React.Component {
     render() {
@@ -16,6 +16,8 @@ class Body extends React.Component {
                                                             description={animal.description}
                                                             altText={animal.title}
                                                             key={animal._id}
+                                                            showModal={this.props.showModal}
+                                                            beast={animal}
                                             />
                                     )
                                 })}
