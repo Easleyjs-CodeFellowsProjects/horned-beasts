@@ -1,5 +1,6 @@
 import React from 'react'
 import Modal from 'react-bootstrap/Modal';
+import { Image } from 'react-bootstrap';
 
 class SelectedBeast extends React.Component {
 
@@ -10,7 +11,7 @@ class SelectedBeast extends React.Component {
               <Modal.Title>{this.props.beast.title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <img src={this.props.beast.image_url} alt={this.props.beast.title}></img>
+                <Image src={this.props.beast.image_url} fluid />
                 {this.props.beast.description}
             </Modal.Body>
           </Modal>

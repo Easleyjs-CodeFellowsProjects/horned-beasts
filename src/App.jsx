@@ -12,7 +12,17 @@ class App extends React.Component {
   
   state = { 
     shouldShowModal: false,
-    beast: {}
+    beast: {},
+    animals: animals
+  }
+
+  filterAnimals = (numHorns) => {
+    const filteredAnimals = animals.filter( animal => {
+      if ( animal.horns == numHorns || numHorns == null) {
+        return animal
+      }
+    })
+    this.setState({ animals: filteredAnimals })
   }
 
   showModal = (beast) => {
@@ -31,8 +41,8 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <Header />
-        <Body animals={animals} showModal={this.showModal} />
+        <Header filterAnimals={this.filterAnimals} />
+        <Body animals={this.state.animals} showModal={this.showModal} />
         <SelectedBeast shouldShowModal={this.state.shouldShowModal} hideModal={this.hideModal} beast={this.state.beast} />
         <Footer />
       </>
